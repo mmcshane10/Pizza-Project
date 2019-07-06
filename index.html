@@ -15,56 +15,36 @@
     <div class="image">
       <img src="img/pizza_main.jpg" alt="main pizza image">
     </div>
-
-    <!--Pizza Size Form-->
-    <form class="pizzabuilder">
+    <form id="pizza_builder">
       <div class="form-group">
-      <h3>Select Pizza Size:</h3>
-      <div class="radio">
-        <label>
-          <input type="radio" name="pizza-size" value="12">
-          Small ($12.00)
-        </label>
+        <p class="form-header">Select a Size:</p>
+        <input type="radio" name="pizza-size" value="12">Small<br>
+        <input type="radio" name="pizza-size" value="15">Medium<br>
+        <input type="radio" name="pizza-size" value="18">Large<br>
+        <input type="radio" name="pizza-size" value="20">X-Large<br>
       </div>
-      <div class="radio">
-        <label>
-          <input type="radio" name="pizza-size" value="15">
-          Medium ($15.00)
-        </label>
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio" name="pizza-size" value="18">
-          Large ($18.00)
-        </label>
-      </div>
-      </div>
-      <!--Meat Toppings Form -->
       <div class="form-group">
-      <h3>Select Protein:</h3>
-      <input type="checkbox" name="toppings-meat" value="1">Pepperoni ($1.00)<br>
-      <input type="checkbox" name="toppings-meat" value="1">Sausage ($1.00)<br>
-      <input type="checkbox" name="toppings-meat" value="1">BBQ Chicken ($1.00)<br>
-      <input type="checkbox" name="toppings-meat" value="2">Bacon ($2.00)<br>
-      <input type="checkbox" name="toppings-meat" value="2">Canadian Bacon ($2.00)<br>
+        <p class="form-header">Select Meats:</p>
+        <input type="checkbox" name="toppings-meat" value="2">Pepperoni ($2.00)<br>
+        <input type="checkbox" name="toppings-meat" value="2">Sausage ($2.00)<br>
+        <input type="checkbox" name="toppings-meat" value="2">BBQ Chicken ($2.00)<br>
+        <input type="checkbox" name="toppings-meat" value="3">Bacon ($3.00)<br>
+        <input type="checkbox" name="toppings-meat" value="3">Canadian Bacon ($3.00)<br>
       </div>
-      <!--Additional Toppings Form -->
       <div class="form-group">
-      <h3>Select Additional Toppings:</h3>
-      <input type="checkbox" name="toppings-additional" value="0.5">Onion ($0.50)<br>
-      <input type="checkbox" name="toppings-additional" value="0.5">Garlic ($0.50)<br>
-      <input type="checkbox" name="toppings-additional" value="0.5">Black Olives ($0.50)<br>
-      <input type="checkbox" name="toppings-additional" value="0.5">Basil ($0.50)<br>
-      <input type="checkbox" name="toppings-additional" value="0.5">Peppers ($0.50)<br>
-      <input type="checkbox" name="toppings-additional" value="0.5">Mushrooms ($0.50)<br>
-      <input type="checkbox" name="toppings-additional" value="1">Extra Cheese ($1.00)<br>
+        <p class="form-header">Select Additional Toppings</p>
+        <input type="checkbox" name="toppings-additional" value="0.5">Onion ($0.50)<br>
+        <input type="checkbox" name="toppings-additional" value="0.5">Garlic ($0.50)<br>
+        <input type="checkbox" name="toppings-additional" value="0.5">Black Olives ($0.50)<br>
+        <input type="checkbox" name="toppings-additional" value="0.5">Basil ($0.50)<br>
+        <input type="checkbox" name="toppings-additional" value="0.5">Peppers ($0.50)<br>
+        <input type="checkbox" name="toppings-additional" value="0.5">Mushrooms ($0.50)<br>
+        <input type="checkbox" name="toppings-additional" value="1">Extra Cheese ($1.00)<br>
       </div>
-
-      <button type="submit" class="btn-info">Review my Order</button>
+      <button type="submit">Submit Survey</button>
     </form>
 
     <div id="results">
-
     </div>
 
   </div>

@@ -7,14 +7,11 @@ function Pizza(size, meat, toppings) {
 
 // UI LOGIC
 $(document).ready(function() {
-  debugger;
-  $("form#pizzabuilder").submit(function(event) {
+  $("form#pizza_builder").submit(function(event) {
     event.preventDefault();
-    alert("hello")
     console.log("form submitted");
-    debugger;
 
-    var sizeInput = $("#radio").val();
+    var sizeInput = $("input:radio[name=pizza-size]:checked").val();
 
     var meatInput = [];
     $("input:checkbox[name=toppings-meat]:checked").each(function(){
