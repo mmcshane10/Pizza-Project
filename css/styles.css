@@ -1,0 +1,21 @@
+body {
+  background-color: #f2f2f2;
+}
+
+h1 {
+  text-align: center;
+}
+
+.slogan {
+  text-align: center;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.image {
+  text-align: center;
+}
+img {
+  height: 300px;border: solid black 1px;
+  border-radius: 10px;
+}
