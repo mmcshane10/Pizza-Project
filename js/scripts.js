@@ -6,11 +6,13 @@ function Pizza(size, meat, toppings) {
 };
 
 // UI LOGIC
-$(document).ready(function(){
-  $("form#pizza-builder").submit(function(event) {
-    alert("hello")
-    console.log("hello");
+$(document).ready(function() {
+  debugger;
+  $("form#pizzabuilder").submit(function(event) {
     event.preventDefault();
+    alert("hello")
+    console.log("form submitted");
+    debugger;
 
     var sizeInput = $("#radio").val();
 
