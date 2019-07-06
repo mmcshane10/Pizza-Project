@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 <head>
+  <meta charset="utf-8">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   <script src="js/scripts.js"></script>
   <title>Mike's Pizza Palace</title>
   <!-- https://github.com/mrtsanchez/ticket-movies/ -->
@@ -15,6 +16,49 @@
     <div class="image">
       <img src="img/pizza_main.jpg" alt="main pizza image">
     </div>
+
+    <!--Pizza Size Form-->
+    <form class="pizza-builder" action="index.html" method="post">
+      <h3>Select Pizza Size:</h3>
+      <div class="radio">
+        <label>
+          <input type="radio" name="pizza-size" value="12">
+          Small ($12.00)
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="pizza-size" value="15">
+          Medium ($15.00)
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="pizza-size" value="18">
+          Large ($18.00)
+        </label>
+      </div>
+
+      <!--Meat Toppings Form -->
+      <h3>Select Protein:</h3>
+      <input type="checkbox" name="toppings-meat" value="1">Pepperoni ($1.00)<br>
+      <input type="checkbox" name="toppings-meat" value="1">Sausage ($1.00)<br>
+      <input type="checkbox" name="toppings-meat" value="1">BBQ Chicken ($1.00)<br>
+      <input type="checkbox" name="toppings-meat" value="2">Bacon ($2.00)<br>
+      <input type="checkbox" name="toppings-meat" value="2">Canadian Bacon ($2.00)<br>
+
+      <!--Additional Toppings Form -->
+      <h3>Select Additional Toppings:</h3>
+      <input type="checkbox" name="toppings-additional" value="0.5">Onion ($0.50)<br>
+      <input type="checkbox" name="toppings-additional" value="0.5">Garlic ($0.50)<br>
+      <input type="checkbox" name="toppings-additional" value="0.5">Black Olives ($0.50)<br>
+      <input type="checkbox" name="toppings-additional" value="0.5">Basil ($0.50)<br>
+      <input type="checkbox" name="toppings-additional" value="0.5">Peppers ($0.50)<br>
+      <input type="checkbox" name="toppings-additional" value="0.5">Mushrooms ($0.50)<br>
+      <input type="checkbox" name="toppings-additional" value="1">Extra Cheese ($1.00)<br>
+
+      <button type="submit" class="btn-info">Review my Order</button>
+    </form>
 
     <div id="results">
 
