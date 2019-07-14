@@ -55,7 +55,7 @@ $(document).ready(function() {
     var newPizza = new Pizza(sizeInput, meatInput, toppingsInput);
     console.log(newPizza);
 
-  $("#results").text("The price for your pizza is: $" + newPizza.price());
+  $("#results").text("The price for your pizza is: $" + newPizza.price().toFixed(2));
 
   });
 });
