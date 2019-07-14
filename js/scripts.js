@@ -18,20 +18,24 @@ Pizza.prototype.price = function() {
     price += 20;
   }
 
-  if (this.meat === "Bacon"){
-    price += 3;
-  } else {
-    price += 2;
-  }
+  for (var i=0; i< this.meat.length; i++) {
+    if (this.meat[i] === "Bacon"){
+      price += 3;
+    } else {
+      price += 2;
+    }
+  };
 
-  if (this.toppings === "Extra Cheese"){
+  for (var i=0; i< this.toppings.length; i++) {
+    if (this.toppings[i] === "Extra Cheese"){
     price += 1;
-  } else {
+    } else {
     price += 0.5;
-  }
+    }
+  };
 
   return price;
-}
+};
 
 // UI LOGIC
 $(document).ready(function() {
@@ -55,7 +59,6 @@ $(document).ready(function() {
     var newPizza = new Pizza(sizeInput, meatInput, toppingsInput);
     console.log(newPizza);
 
-  $("#results").text("The price for your pizza is: $" + newPizza.price().toFixed(2));
-
+    $("#results").text("The price for your pizza is: $" + newPizza.price().toFixed(2));
   });
 });
