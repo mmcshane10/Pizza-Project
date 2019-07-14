@@ -5,6 +5,8 @@ function Pizza(size, meat, toppings) {
   this.toppings = toppings
 };
 
+var meatInput = [];
+var toppingsInput = [];
 var price = 0
 
 Pizza.prototype.price = function() {
@@ -44,13 +46,11 @@ $(document).ready(function() {
 
     var sizeInput = $("input:radio[name=pizza-size]:checked").val();
 
-    var meatInput = [];
     $("input:checkbox[name=toppings-meat]:checked").each(function(){
       var userMeatInput = $(this).val();
       meatInput.push(userMeatInput);
     });
 
-    var toppingsInput = [];
     $("input:checkbox[name=toppings-additional]:checked").each(function(){
       var userToppingsInput = $(this).val();
       toppingsInput.push(userToppingsInput);
