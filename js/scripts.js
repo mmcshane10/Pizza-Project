@@ -54,7 +54,7 @@ $(document).ready(function() {
     }
     console.log(price);
 
-  $("#results").text("The price for your pizza is: $" + price);
+  $("#results").text("The price for your pizza is: $" + price.toFixed(2));
 
   });
 });
