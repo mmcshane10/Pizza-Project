@@ -7,6 +7,32 @@ function Pizza(size, meat, toppings) {
 
 var price = 0
 
+Pizza.prototype.price = function() {
+  if (this.size === "Small"){
+    price += 12;
+  } else if (this.size === "Medium"){
+    price += 15;
+  } else if (this.size === "Large"){
+    price += 18;
+  } else {
+    price += 20;
+  }
+
+  if (this.meat === "Bacon"){
+    price += 3;
+  } else {
+    price += 2;
+  }
+
+  if (this.toppings === "Extra Cheese"){
+    price += 1;
+  } else {
+    price += 0.5;
+  }
+
+  return price;
+}
+
 // UI LOGIC
 $(document).ready(function() {
   $("form#pizza_builder").submit(function(event) {
@@ -29,32 +55,7 @@ $(document).ready(function() {
     var newPizza = new Pizza(sizeInput, meatInput, toppingsInput);
     console.log(newPizza);
 
-    if (newPizza.size === "Small"){
-      price += 12;
-    } else if (newPizza.size === "Medium"){
-      price += 15;
-    } else if (newPizza.size === "Large"){
-      price += 18;
-    } else {
-      price += 20;
-    }
-    console.log(price);
-
-    if (newPizza.meat === "Bacon"){
-      price += 3;
-    } else {
-      price += 2;
-    }
-    console.log(price);
-
-    if (newPizza.toppings === "Extra Cheese"){
-      price += 1;
-    } else {
-      price += 0.5;
-    }
-    console.log(price);
-
-  $("#results").text("The price for your pizza is: $" + price.toFixed(2));
+  $("#results").text("The price for your pizza is: $" + newPizza.price());
 
   });
 });
