@@ -1,15 +1,16 @@
 // BIZ LOGIC
-function Pizza(size, meats, toppings) {
+function Pizza(size, meat, toppings) {
   this.size = size,
-  this.meats = meats,
+  this.meat = meat,
   this.toppings = toppings
 };
+
+var price = 0
 
 // UI LOGIC
 $(document).ready(function() {
   $("form#pizza_builder").submit(function(event) {
     event.preventDefault();
-    console.log("form submitted");
 
     var sizeInput = $("input:radio[name=pizza-size]:checked").val();
 
@@ -28,30 +29,32 @@ $(document).ready(function() {
     var newPizza = new Pizza(sizeInput, meatInput, toppingsInput);
     console.log(newPizza);
 
-    var price = 0
-
     if (newPizza.size === "Small"){
       price += 12;
-    } else if (newPizza.size === "Medium") {
+    } else if (newPizza.size === "Medium"){
       price += 15;
-    } else if (newPizza.size === "Large") {
+    } else if (newPizza.size === "Large"){
       price += 18;
     } else {
       price += 20;
     }
-console.log(price);
-    if (newPizza.meats === "Bacon" || "Canadian Bacon"){
+    console.log(price);
+
+    if (newPizza.meat === "Bacon"){
       price += 3;
     } else {
-       price += 2;
+      price += 2;
     }
-console.log(price);
+    console.log(price);
+
     if (newPizza.toppings === "Extra Cheese"){
-      price += 1
+      price += 1;
     } else {
-      price += 0.5
+      price += 0.5;
     }
-console.log(price);
+    console.log(price);
+
+  $("#results").text("The price for your pizza is: $" + price);
 
   });
 });
